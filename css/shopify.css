@@ -1,3 +1,53 @@
-
+.ds-eshop .portfolio-category {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  width: 80px;
+  height: 30px;
+  font-size: 10px;
+  /*transform: rotateZ(-45deg);*/
+  z-index: 3;
+  text-align: center;
+  line-height: 30px;
+  border-bottom-left-radius: 10px;
+  background-color: #E8871E;
+  color: black;
+}
+.ds-eshop .portfolio-banner {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 8px;
+  /*transform: rotateZ(-45deg);*/
+  z-index: 3;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  background-color: #00c0e9;
+  color: white;
+}
+.ds-eshop .portfolio-label {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 20px;
+  font-size: 10px;
+  /*transform: rotateZ(-45deg);*/
+  z-index: 3;
+  text-align: center;
+  line-height: 20px;
+  background-color: #00c0e9;
+  color: white;
+}
+.ds-eshop .portfolio-promo {
+  background-color: #009688;
+  color: white;
+}
+.ds-eshop .portfolio-hot {
+  background-color: #d6284b;
+  color: white;
+}
 
 /*# sourceMappingURL=shopify.css.map */
