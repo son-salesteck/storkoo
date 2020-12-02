@@ -848,7 +848,7 @@ Play Button
 .image-hover-zoom {
     position: relative;
     overflow: hidden;
-    cursor: url('/assets/images/expand.png'), default;
+    cursor: url('/images/expand.png'), default;
 
     img {
         transition: all .4s ease;
@@ -890,7 +890,7 @@ iframe {
 }
 
 .portfolio-item .new-badge {
-    //background: url("/assets/preview/images/new-badge.png") no-repeat 0 0;
+    //background: url("/preview/images/new-badge.png") no-repeat 0 0;
     height: 61px;
     position: absolute;
     right: 12px;

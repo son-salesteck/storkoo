@@ -8091,7 +8091,7 @@ Play Button
 .image-hover-zoom {
   position: relative;
   overflow: hidden;
-  cursor: url("/assets/images/expand.png"), default;
+  cursor: url("/images/expand.png"), default;
   /*hover state*/
 }
 .image-hover-zoom img {
@@ -8855,19 +8855,19 @@ Helpers
 }
 
 .background-pattern {
-  background-image: url(/assets/images/overlay-pattern/gplay.png);
+  background-image: url(/images/overlay-pattern/gplay.png);
 }
 
 .background-pattern-1 {
-  background-image: url(/assets/images/overlay-pattern/3px-tile.png);
+  background-image: url(/images/overlay-pattern/3px-tile.png);
 }
 
 .background-pattern-2 {
-  background-image: url(/assets/images/overlay-pattern/asfalt-dark.png);
+  background-image: url(/images/overlay-pattern/asfalt-dark.png);
 }
 
 .background-pattern-3 {
-  background-image: url(/assets/images/overlay-pattern/axiom-pattern.png);
+  background-image: url(/images/overlay-pattern/axiom-pattern.png);
 }
 
 .shadow {
@@ -15528,7 +15528,7 @@ body.breakpoint-xs hr.space-xxlg, body.breakpoint-sm hr.space-xxlg {
 }
 
 .triangle-divider-bottom {
-  background-image: url("/assets/images/triangle-divider-down.png");
+  background-image: url("/images/triangle-divider-down.png");
   background-position: left center;
   background-repeat: repeat-x;
   bottom: 0;
@@ -15538,7 +15538,7 @@ body.breakpoint-xs hr.space-xxlg, body.breakpoint-sm hr.space-xxlg {
 }
 
 .triangle-divider-top {
-  background-image: url("/assets/images/triangle-divider-top.png");
+  background-image: url("/images/triangle-divider-top.png");
   background-position: left center;
   background-repeat: repeat-x;
   top: 0;
