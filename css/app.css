@@ -6,6 +6,7 @@
 @import "../plugins/bootstrap-datetimepicker/tempusdominus-bootstrap-4.css";
 @import "style.css";
 @import "theme.css";
+@import "shopify.css";
 @import "responsive.min.css";
 @import "custom.css";
 @import "../plugins/select2-4.1.0-beta.1/dist/css/select2.min.css";
