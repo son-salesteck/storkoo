@@ -270,6 +270,32 @@
     transition: unset !important;
   }
 }
+.allergen.badge {
+  margin-left: 2px;
+  vertical-align: middle;
+  max-width: 80px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.product-allergen {
+  margin-bottom: 5px;
+}
+
+.form-check.allergen {
+  display: inline-block;
+  padding-left: 2rem;
+  padding-right: 1rem;
+  line-height: 30px;
+  border-radius: 3px;
+  margin: 2px;
+  border: 1px solid #009688;
+}
+
+.productify-controls .dropdown-menu {
+  line-height: 40px;
+}
+
 .product-list .product-item {
   width: 100%;
   height: 150px;
@@ -661,10 +687,29 @@
   bottom: 0;
 }
 
+#optionizer .optionizer-checkbox-container,
+#optionizer .optionizer-radio-container {
+  padding: 10px 15px;
+}
 @media (min-width: 576px) and (max-width: 992px) {
   #optionizer .modal-dialog {
     max-width: 95%;
   }
 }
 
-/*# sourceMappingURL=eshop.css.map */
+.payment-element {
+  border-radius: 3px;
+  margin: 2px;
+  padding: 2px;
+  max-width: 125px;
+  width: 100%;
+  border: 1px solid #009688;
+  height: 100%;
+}
+
+.payment-img {
+  max-width: 80px;
+  max-height: 50px;
+}
+
+/*# sourceMappingURL=productify.css.map */

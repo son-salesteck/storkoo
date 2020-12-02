@@ -1,3 +1,4 @@
+$asset-path : "..";
 @import "scss/mixins";
 @import "scss/variables";
 @import "scss/custom/include";
@@ -585,4 +586,4 @@ form.display{
     }
 }
 
-@import "scss/eshop/menu-filter";
+@import "scss/productify/menu-filter";
