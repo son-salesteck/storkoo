@@ -1,0 +1,99 @@
+@mixin vendor($prop, $val){
+    -webkit-#{$prop} : $val;
+    -moz-#{$prop} : $val;
+    -ms-#{$prop} : $val;
+    -o-#{$prop} : $val;
+    #{$prop} : $val;
+}
+
+@mixin box-shadow($val){
+    @include vendor('box-shadow', $val);
+}
+
+@mixin box-shadow-hover($val){
+    @include vendor('box-shadow', $val);
+}
+
+@mixin transition-all-ease($val){
+    @include vendor('transition', $val);
+}
+
+@mixin transform($val){
+    @include vendor('transform', $val);
+}
+
+@mixin colorActive ($color){
+    color : darken( $color, 15%) !important;
+}
+
+@mixin colorDisabled ($color){
+    color : lighten( $color, 15%) !important;
+}
+
+@mixin backgroundActive ($color){
+    background-color : darken( $color, 15%) !important;
+}
+
+@mixin backgroundDisabled ($color){
+    background-color : lighten( $color, 15%) !important;
+}
+
+@mixin color-bg-color($color : null, $bg-color : null){
+
+    @if ($bg-color != null){
+        background-color: $bg-color !important;
+    }
+    @if ($color != null){
+        color: $color !important;
+    }
+}
+
+@mixin color-bg-color-active($color : null, $bg-color : null){
+
+    @if ($bg-color != null){
+        @include backgroundActive($bg-color);
+    }
+    @if ($color != null){
+        @include colorActive($color);
+    }
+}
+
+@mixin color-bg-color-disabled($color : null, $bg-color : null){
+
+    @if ($bg-color != null){
+        @include backgroundDisabled($bg-color);
+    }
+    @if ($color != null){
+        @include colorDisabled($color);
+    }
+}
+
+@mixin border($width : null, $style : null, $color : null, $radius : null, $isImportant : false){
+    $important : "";
+    @if($isImportant == true){
+        $important : !important;
+    }
+    border : {
+        @if ($width != null){
+            width :$width #{$important};
+        }
+        @if ($style != null){
+            style :$style #{$important};
+        }
+        @if ($color != null){
+            color : $color #{$important};
+        }
+        @if ($radius != null){
+            radius: $radius #{$important};
+        }
+    }
+}
+
+@mixin prop-val($prop, $val){
+    #{$prop} : $val;
+}
+
+@mixin cursor-disabled{
+    cursor: not-allowed;
+    pointer-events: auto;
+}

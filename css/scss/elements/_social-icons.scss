@@ -1,0 +1,349 @@
+/* ----------------------------------------------------------------------
+	Social icons
+-------------------------------------------------------------------------*/
+
+@mixin SocialName_and_hover($name, $background-color){
+
+    .#{$name}, .#{$name}:hover {
+        background-color: $background-color;
+    }
+}
+@mixin socialSize_and_fontSize ($class, $size, $fontSize){
+    &.#{$class} {
+        a {
+            height: $size;
+            width: $size;
+            line-height: $size;
+            font-size: $fontSize;
+        }
+    }
+}
+.social-icons {
+    //line-height: 0;
+    ul{
+        padding: 0;
+        margin: 0;
+    }
+    li{
+        //float: left;
+        display: inline-block;
+        list-style: none;
+        a{
+            float: left;
+            height: 32px;
+            width: 32px;
+            line-height: 32px;
+            font-size: 16px;
+            text-align: center;
+            margin: 0 4px 4px 0;
+            border-radius: 4px;
+            border: 0;
+            background: transparent;
+            color: #333;
+            overflow: hidden;
+            -webkit-transition: all .3s ease;
+            -o-transition: all .3s ease;
+            transition: all .3s ease;
+
+            &:hover i,
+            &:hover icon {
+                -webkit-animation: toTopFromBottom 0.3s forwards;
+                -moz-animation: toTopFromBottom 0.3s forwards;
+                animation: toTopFromBottom 0.3s forwards;
+            }
+        }
+    }
+
+    &:not(.social-icons-colored):not(.social-icons-colored-hover) li a:hover{
+        background-color: #eee;
+    }
+
+    // Light
+    &.social-icons-light {
+        li a{
+            background: #fff;
+            color: #333;
+            border: 1px solid #eee;
+        }
+    }
+
+
+    // Dark
+    &.social-icons-dark{
+        li a {
+            color: $color-white;
+        }
+         &.social-icons-border li a{
+             border: 1px solid #333 !important;
+         }
+    }
+
+    // Size
+    @include socialSize_and_fontSize('social-icons-small', 36px, 14px);
+    @include socialSize_and_fontSize('social-icons-medium', 42px, 16px);
+    @include socialSize_and_fontSize('social-icons-large', 48px, 18px);
+    @include socialSize_and_fontSize('social-icons-xlarge', 54px, 20px);
+    // Border
+    &.social-icons-border li a {
+        border: 1px solid #d7d7d7;
+        background: transparent;
+        color: #333;
+    }
+
+    // Rounded
+    &.social-icons-rounded li a {
+        border-radius: 50%;
+    }
+
+    // Colored
+    &.social-icons-colored,
+    &.social-icons-colored-hover {
+        a, a:hover{
+            color: $color-white !important;
+            border: 0;
+        }
+
+        @include SocialName_and_hover('amazon', #ff8e2e);
+        @include SocialName_and_hover('behance', #1879fd);
+        @include SocialName_and_hover('blogger', #ff9233);
+        @include SocialName_and_hover('delicious', #377bda);
+        @include SocialName_and_hover('deviantart', #6a8a7b);
+        @include SocialName_and_hover('digg', #75788d);
+        @include SocialName_and_hover('dribbble', #f7659c);
+        @include SocialName_and_hover('dropbox', #17a3eb);
+        @include SocialName_and_hover('evernote', #9acf4f);
+        @include SocialName_and_hover('facebook', #5d82d1);
+        @include SocialName_and_hover('flickr', #ff48a3);
+        @include SocialName_and_hover('forrst', #45ad76);
+        @include SocialName_and_hover('github', #3f91cb);
+        @include SocialName_and_hover('google', #eb5e4c);
+        @include SocialName_and_hover('gplus', #d68400);
+        @include SocialName_and_hover('grooveshark', #ffb21d);
+        @include SocialName_and_hover('instagram', #e53d00);
+        @include SocialName_and_hover('lastfm', #f34320);
+        @include SocialName_and_hover('linkedin', #238cc8);
+        @include SocialName_and_hover('myspace', #008dde);
+        @include SocialName_and_hover('pinterest', #e13138);
+        @include SocialName_and_hover('quora', #ea3d23);
+        @include SocialName_and_hover('rss', #faa33d);
+        @include SocialName_and_hover('skype', #13c1f3);
+        @include SocialName_and_hover('snapchat', #faa33d);
+        @include SocialName_and_hover('soundcloud', #ff7e30);
+        @include SocialName_and_hover('stumbleupon', #ff5c30);
+        @include SocialName_and_hover('tumblr', #426d9b);
+        @include SocialName_and_hover('twitter', #40bff5);
+        @include SocialName_and_hover('vimeo', #35c6ea);
+        @include SocialName_and_hover('wikipedia', #b3b5b8);
+        @include SocialName_and_hover('wordpress', #2592c3);
+        @include SocialName_and_hover('xing', #1a8e8c);
+        @include SocialName_and_hover('yahoo', #ab47ac);
+        @include SocialName_and_hover('youtube', #ef4e41);
+    }
+}
+
+.text-center.social-icons ul {
+    display: inline-block;
+}
+
+
+.dark {
+    .social-icons li a {
+        color: $color-white;
+    }
+}
+.dark .social-icons.social-icons-border li a{
+    border: 1px solid #333 !important;
+}
+
+// Dark
+.dark .social-icons li a .social-icons.social-icons-dark li a {
+    background: #888;
+    color: #fff;
+}
+
+// Light
+.social-icons.social-icons-light li a{
+    background: #fff;
+    color: #333;
+    border: 1px solid #eee;
+}
+
+// Rounded
+.social-icons.social-icons-rounded li a,
+.social-icons.social-icons-rounded a {
+    border-radius: 50%;
+}
+
+.social-icons:not(.social-icons-colored):not(.social-icons-colored-hover) li a:hover{
+    background-color: #eee;
+}
+
+.dark .social-icons:not(.social-icons-colored):not(.social-icons-colored-hover) li a:hover {
+    background-color: $dark;
+}
+
+
+@-webkit-keyframes toTopFromBottom {
+    49% {
+        -webkit-transform: translateY(-100%);
+    }
+
+    50% {
+        opacity: 0;
+        -webkit-transform: translateY(100%);
+    }
+
+    51% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes toTopFromBottom {
+    49% {
+        -moz-transform: translateY(-100%);
+    }
+
+    50% {
+        opacity: 0;
+        -moz-transform: translateY(100%);
+    }
+
+    51% {
+        opacity: 1;
+    }
+}
+
+@keyframes toTopFromBottom {
+    49% {
+        transform: translateY(-100%);
+    }
+
+    50% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    51% {
+        opacity: 1;
+    }
+}
+.social-icons{
+    display: inline-block;
+    margin: 2px;
+    a {
+
+        display: inline-block;
+        height: 32px;
+        width: 32px;
+        line-height: 32px;
+        font-size: 16px;
+        text-align: center;
+        border-radius: 4px;
+        margin: 0 5px 0 0;
+        border: 0;
+        background: transparent;
+        color: #333;
+        overflow: hidden;
+        -webkit-transition: all .3s ease;
+        -o-transition: all .3s ease;
+        transition: all .3s ease;
+        &:last-of-type{
+            margin: 0 0 0 0;
+        }
+
+        &:hover i,
+        &:hover icon {
+            -webkit-animation: toTopFromBottom 0.3s forwards;
+            -moz-animation: toTopFromBottom 0.3s forwards;
+            animation: toTopFromBottom 0.3s forwards;
+        }
+    }
+    // Dark
+    &.social-icons-dark{
+        a{
+            background: #888;
+            border-color: #888;
+            color: $color-white;
+        }
+        &:not(.social-icons-colored):not(.social-icons-colored-hover) a:hover {
+            background-color: $dark;
+        }
+    }
+    // Light
+    &.social-icons-light{
+        a {
+            background: $color-white;
+            border-color: $color-white;
+            color: #333;
+        }
+        &:not(.social-icons-colored):not(.social-icons-colored-hover) a:hover {
+            background-color: #eee;
+        }
+    }
+    // Rounded
+    &.social-icons-rounded {
+        a {
+            border-radius: 50%;
+        }
+    }
+
+    // Border
+    &.social-icons-border a {
+        border: 1px solid #d7d7d7;
+        background: transparent;
+        color: #333;
+    }
+
+    // Size
+
+    @include socialSize_and_fontSize('social-icons-sm', 36px, 14px);
+    @include socialSize_and_fontSize('social-icons-md', 42px, 16px);
+    @include socialSize_and_fontSize('social-icons-lg', 48px, 18px);
+    @include socialSize_and_fontSize('social-icons-xl', 54px, 20px);
+
+    // Colored
+    &.social-icons-colored,
+    &.social-icons-colored-hover {
+        a, a:hover{
+            color: $color-white !important;
+            border: 0;
+        }
+
+        @include SocialName_and_hover('amazon', #ff8e2e);
+        @include SocialName_and_hover('behance', #1879fd);
+        @include SocialName_and_hover('blogger', #ff9233);
+        @include SocialName_and_hover('delicious', #377bda);
+        @include SocialName_and_hover('deviantart', #6a8a7b);
+        @include SocialName_and_hover('digg', #75788d);
+        @include SocialName_and_hover('dribbble', #f7659c);
+        @include SocialName_and_hover('dropbox', #17a3eb);
+        @include SocialName_and_hover('evernote', #9acf4f);
+        @include SocialName_and_hover('facebook', #5d82d1);
+        @include SocialName_and_hover('flickr', #ff48a3);
+        @include SocialName_and_hover('forrst', #45ad76);
+        @include SocialName_and_hover('github', #3f91cb);
+        @include SocialName_and_hover('google', #eb5e4c);
+        @include SocialName_and_hover('gplus', #d68400);
+        @include SocialName_and_hover('grooveshark', #ffb21d);
+        @include SocialName_and_hover('instagram', #e53d00);
+        @include SocialName_and_hover('lastfm', #f34320);
+        @include SocialName_and_hover('linkedin', #238cc8);
+        @include SocialName_and_hover('myspace', #008dde);
+        @include SocialName_and_hover('pinterest', #e13138);
+        @include SocialName_and_hover('quora', #ea3d23);
+        @include SocialName_and_hover('rss', #faa33d);
+        @include SocialName_and_hover('skype', #13c1f3);
+        @include SocialName_and_hover('snapchat', #faa33d);
+        @include SocialName_and_hover('soundcloud', #ff7e30);
+        @include SocialName_and_hover('stumbleupon', #ff5c30);
+        @include SocialName_and_hover('tumblr', #426d9b);
+        @include SocialName_and_hover('twitter', #40bff5);
+        @include SocialName_and_hover('vimeo', #35c6ea);
+        @include SocialName_and_hover('wikipedia', #b3b5b8);
+        @include SocialName_and_hover('wordpress', #2592c3);
+        @include SocialName_and_hover('xing', #1a8e8c);
+        @include SocialName_and_hover('yahoo', #ab47ac);
+        @include SocialName_and_hover('youtube', #ef4e41);
+
+    }
+}

@@ -1,0 +1,117 @@
+#pageMenu{
+    overflow: visible !important;
+    &:hover{
+        @extend #pageMenu;
+    }
+
+
+
+
+    #pageMenu-trigger{
+        display: none;
+    }
+
+
+
+    a.active{
+        color:$color-theme;
+        cursor: default;
+    }
+
+    .dropdown > a.active{
+        cursor: pointer;
+    }
+
+    nav {
+        height: 100%;
+
+        >ul>li {
+            .dropdown-menu{
+                padding: 7px 10px;
+            }
+            .dropdown-submenu{
+                width: 100%;
+
+                &:not(.hover-active):hover{
+                    >ul {
+                        display: block;
+                        animation: fade-in-out .3s ease;
+                    }
+
+                    &:before {
+                        right: 12px;
+                    }
+                }
+
+
+                >.dropdown-menu {
+                    margin-left: -10px;
+                    left: 100%;
+                    top: -1px;
+                    z-index: 4;
+                }
+
+                &:before {
+                    line-height: 40px;
+                    content: "\e95a";
+                    font-family: inspiro-icons;
+                    opacity: .6;
+                    position: absolute;
+                    right: 16px;
+                    color: #262626;
+                    font-size: 12px;
+                    transition: all .2s ease;
+                }
+            }
+
+        }
+    }
+}
+
+//.page-menu #pageMenu-trigger{
+//    display: none;
+//}
+//
+//
+//#pageMenu a.active{
+//    color:$color-theme;
+//    cursor: default;
+//}
+//#pageMenu .dropdown > a.active{
+//    cursor: pointer;
+//}
+
+
+//#pageMenu nav>ul>li .dropdown-menu{
+//    padding: 7px 10px;
+//}
+//#pageMenu nav>ul>li .dropdown-submenu{
+//    width: 100%;
+//}
+
+//#pageMenu nav>ul>li .dropdown-submenu:not(.hover-active):hover>ul {
+//    display: block;
+//    animation: fade-in-out .3s ease;
+//}
+//#pageMenu nav>ul>li .dropdown-submenu>.dropdown-menu {
+//    margin-left: -10px;
+//    left: 100%;
+//    top: -1px;
+//    z-index: 4;
+//}
+
+//#pageMenu nav>ul>li .dropdown-submenu:not(.hover-active):hover:before {
+//    right: 12px;
+//}
+
+//#pageMenu nav>ul>li .dropdown-submenu:before {
+//    line-height: 40px;
+//    content: "\e95a";
+//    font-family: inspiro-icons;
+//    opacity: .6;
+//    position: absolute;
+//    right: 16px;
+//    color: #262626;
+//    font-size: 12px;
+//    transition: all .2s ease;
+//}

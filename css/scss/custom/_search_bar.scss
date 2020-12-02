@@ -1,0 +1,47 @@
+// SEARCH BAR
+.search-bar{
+
+    .search-bar-result{
+        position: absolute;
+        top: 40px;
+        text-align: initial;
+        height: auto;
+        background-color: white;
+        width:100%;
+        line-height: initial;
+        display: none;
+
+        &.active{
+            display: block;
+        }
+
+        .result-item{
+            padding: 10px 16px 10px 26px;
+            display: block;
+            font-size: 10px;
+            position: relative;
+            &:before{
+                font-family: "Font Awesome 5 Free";
+                font-size: 14px;
+                content: " ";
+                font-weight: 900;
+                position: absolute;
+                left: 5px;
+            }
+            &:hover{
+                background-color: rgba($color-theme, 0.3);
+                //color: $color-white;
+                &:before{
+                    content: "\f291";
+                    color: $color-accent;
+                }
+            }
+
+            &:not(:first-of-type){
+                border-top: 1px solid rgba($color-theme, 0.3);
+            }
+
+        }
+    }
+
+}

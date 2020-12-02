@@ -1,0 +1,238 @@
+
+$product-height: 150px;
+
+$allergen-height : 30px;
+
+
+.product-list{
+
+    .product-item{
+
+        width: 100%;
+        height: $product-height;
+        border-radius: 5px;
+        margin: 0 0 25px 0;
+        position: relative;
+        padding: 0;
+
+        .product-image {
+            max-width: $product-height;
+            width: $product-height;
+            border : 0;
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            float: left;
+            min-height: inherit;
+            height: inherit;
+            //width: 100%;
+            &+.product-all-details {
+                padding-left: $product-height;
+                position: absolute;
+                left: 0;
+                min-height: inherit;
+                height: inherit;
+
+            }
+            img{
+                height: $product-height;
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        .product-all-details {
+            width: 100%;
+            min-height: inherit;
+            height: inherit;
+            display: block;
+            float: left;
+
+            .visible-details {
+                position: relative;
+                width: 100%;
+                min-height: inherit;
+                height: inherit;
+                overflow: hidden;
+
+                .product-details {
+                    max-width: 80%;
+                    width: auto;
+                    height: inherit;
+                    padding: 10px 15px;
+                    display: inline-block;
+
+                    .product-name {
+                        font-weight: bold;
+                    }
+
+                    .product-desc {
+                        font-size: 12px;
+                    }
+
+                    .product-allergen{
+                        img{
+
+                            width: $allergen-height;
+                            height: $allergen-height;
+                        }
+                    }
+
+                }
+
+                .product-extra {
+                    float: right;
+                    min-height: inherit;
+                    height: inherit;
+                    padding: 10px 15px;
+                    //display: inline-flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    text-align: center;
+
+                    .cart{
+                        max-width: 80px;
+
+                        .product-price {
+                            font-weight:bold;
+                            height: 40px;
+                            line-height: 40px;
+                        }
+
+
+                        .product-add,
+                        .product-detail {
+                            width: 100%;
+                            height: 40px !important;
+                            margin: 10px 0;
+                        }
+                    }
+
+
+
+                }
+            }
+
+        }
+
+
+
+
+        @media (max-width: 767px) {
+
+
+            height: auto;
+            .product-image {
+                max-width: unset;
+                width: 100%;
+                display: block;
+                float: unset;
+                min-height: unset;
+                height: unset;
+                //width: 100%;
+                &+.product-all-details {
+                    padding-left: 0;
+                    position: relative;
+                    left: 0;
+                    min-height: inherit;
+                    height: inherit;
+
+                }
+                img{
+                    height: unset;
+                    margin: 0;
+                    width: 100%;
+                    position: relative;
+                    top: unset;
+                    left: unset;
+                    -ms-transform: unset;
+                    transform: unset;
+                }
+            }
+
+            .product-all-details {
+                width: 100%;
+                min-height: inherit;
+                height: inherit;
+                display: block;
+                float: unset;
+
+                .visible-details {
+                    position: relative;
+                    width: 100%;
+                    min-height: inherit;
+                    height: inherit;
+                    overflow: hidden;
+
+                    .product-details {
+                        width: auto;
+                        height: inherit;
+                        padding: 10px 15px;
+                        display: block;
+                        max-width: unset;
+
+                        .product-name {
+                            font-weight: bold;
+                        }
+
+                        .product-desc {
+                            font-size: 12px;
+                        }
+
+                        .product-allergen{
+                            img{
+
+                                width: $allergen-height;
+                                height: $allergen-height;
+                            }
+                        }
+
+                    }
+
+                    .product-extra {
+                        float: unset;
+                        display: block;
+
+                        .cart{
+                            max-width: unset;
+
+                            .product-price {
+                                width: 100%;
+                                font-weight:bold;
+                                height: 40px;
+                                line-height: 40px;
+                            }
+
+                            input,
+                            .product-add,
+                            .product-detail {
+                                display: inline-block;
+                                width: 45%;
+                                height: 40px !important;
+                                margin: 0 5px;
+                            }
+                        }
+
+
+
+                    }
+                }
+
+            }
+
+        }
+
+    }
+
+
+
+
+
+
+}
+
+

@@ -1,0 +1,93 @@
+// TEXT
+
+.text-rotator{
+    visibility: hidden!important;
+}
+
+.text-rotator.morphext{
+    visibility: visible!important;
+}
+.text-xxxxs{
+    font-size: 9px !important;
+    line-height: 11px !important;
+    letter-spacing: -.02em;
+    font-weight: 400;
+    span{
+        @extend .text-xxxxs;
+    }
+}
+.text-xxxs{
+    font-size: 10px !important;
+    line-height: 14px !important;
+    letter-spacing: -.02em;
+    font-weight: 400;
+    span{
+        @extend .text-xxxs;
+    }
+}
+.text-xxs{
+    font-size: 12px !important;
+    line-height: 16px !important;
+    letter-spacing: -.02em;
+    font-weight: 400;
+    span{
+        @extend .text-xxs;
+    }
+}
+.text-xs{
+    font-size: 14px !important;
+    line-height: 18px !important;
+    letter-spacing: -.02em;
+    font-weight: 400;
+    span{
+        @extend .text-xs;
+    }
+}
+
+.text-sm{
+    font-size: 18px !important;
+    line-height: 22px !important;
+    letter-spacing: -.02em;
+    font-weight: 400;
+    span{
+        @extend .text-sm;
+    }
+}
+
+.text-md{
+    font-size: 22px !important;
+    line-height: 26px !important;
+    letter-spacing: -.02em;
+    font-weight: 500;
+    span{
+        @extend .text-md;
+    }
+}
+
+.text-lg{
+    font-size: 28px !important;
+    line-height: 32px !important;
+    letter-spacing: -.02em;
+    font-weight: 600;
+    span{
+        @extend .text-lg;
+    }
+}
+
+.text-xl{
+    font-size: 30px !important;
+    line-height: 34px !important;
+    letter-spacing: -.02em;
+    font-weight: 600;
+    span{
+        @extend .text-xl;
+    }
+}
+
+
+.text-accent{
+    color: $color-accent !important;
+    &span{
+        @extend .text-accent;
+    }
+}

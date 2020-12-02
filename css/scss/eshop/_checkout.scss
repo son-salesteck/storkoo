@@ -1,0 +1,24 @@
+
+
+/* CHECKOUT */
+
+
+
+#form-checkout select option:not(:first-child):disabled{
+    color : #FF2025;
+}
+
+#form-checkout select option:not(:disabled){
+    color : green;
+}
+
+.cartify-remove-btn{
+    color: #FF2025;
+}
+
+.cartify-remove-btn:hover{
+    color: #BF1D24 !important;
+}
+
+/* END CHECKOUT */
+

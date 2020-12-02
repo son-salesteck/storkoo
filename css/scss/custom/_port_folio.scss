@@ -1,0 +1,52 @@
+// PORTFOLIO
+
+.portfolio{
+    &.portfolio-border{
+        .portfolio-item{
+            border : 1px solid rgba($color-theme, .4);
+            background-color: $color-white;
+            @extend .radius;
+            .portfolio-item-wrap {
+                .portfolio-image {
+                    image{
+                    }
+                }
+                //border-bottom: 1px solid rgba($color-theme, .4);
+            }
+        }
+    }
+    .portfolio-item{
+        .portfolio-item-wrap{
+            .portfolio-image{
+
+                height: 150px;
+                overflow: hidden;
+
+                img{
+                    margin: auto;
+                    position: absolute;
+                    width: unset !important;
+                    max-width: 100% !important;
+                    top:0;
+                    bottom: 0;
+                    left:0;
+                    right:0;
+                }
+            }
+
+            .portfolio-description{
+                color: white;
+            }
+        }
+    }
+    .portfolio-item:not(.no-overlay):hover .portfolio-image:after{
+        //opacity: 0;
+        //width: unset;
+        //height: unset;
+    }
+    .title,
+    .description,
+    .information{
+        padding: 0 5px;
+    }
+}

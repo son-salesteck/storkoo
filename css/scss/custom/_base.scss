@@ -1,0 +1,94 @@
+
+section{
+    &:nth-child(even){
+        @extend .shadow;
+    }
+    &:nth-child(odd){
+        background-color: $background-grey;
+    }
+}
+
+.bg-primary{
+    background-color: $color-theme !important;
+}
+.primary{
+    color: $color-theme !important;
+}
+.heading-text.heading-section>h2:before,
+.heading-text.heading-section>h3:before{
+    background-color: $color-theme !important;
+}
+a.active{
+    color: $color-accent !important;
+}
+
+.btn.btn-colored{
+    background-color: $color-theme !important;
+    border-color: $color-theme !important;
+}
+i.colored {
+    color: $color-theme !important;
+}
+
+
+.input-group{
+    .btn{
+        height:100% !important;
+        &:hover{
+            color: $color-accent;
+        }
+    }
+
+    .input-group-text{
+        background-color: $color-theme;
+        color: white;
+    }
+}
+
+.btn:not([disabled]){
+    &:hover{
+        color: $color-accent !important;
+    }
+}
+
+.btn[disabled]{
+    cursor: default !important;
+}
+
+.bg-color-accent{
+    background-color: $color-accent !important;
+    &span{
+        @extend .bg-color-accent;
+    }
+}
+
+
+.page-menu.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + section:not(:first-of-type) {
+    margin-top: 52px;
+}
+
+
+.input-group>.form-control:focus {
+    z-index: 2;
+    &+ .input-group-btn {
+        z-index: 2;
+    }
+}
+
+
+.input-group>.form-control:focus + .input-group-btn {
+    z-index: 2;
+}
+
+
+.form-control:focus {
+    @include box-shadow(unset !important);
+}
