@@ -159,8 +159,10 @@ select {
     width: 100%;
     -webkit-appearance: none !important;
     -moz-appearance: none !important;
+
+    /*form test*/
     appearance: none !important;
-    background: url('#{$asset-path}/images/dropdown-arrow.png') no-repeat right center !important;
+    background: url( '#{$asset-path}/images/dropdown-arrow.png' ) no-repeat right center !important;
     border: $form-border-width solid $form-border-color;
     border-radius: $form-border-radius;
 }
